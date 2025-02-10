@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DoctorsFragment">
+
+    <!-- Search bar container -->
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Search EditText -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Search by doctor or specialty"
+            android:padding="12dp"
+            android:background="@drawable/search_background"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:inputType="text"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:layout_marginEnd="8dp"
+            android:imeOptions="actionSearch"
+            android:fontFamily="@font/rb_regular" />
+
+        <!-- Filter Button -->
+        <ImageView
+            android:id="@+id/filter_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_filter"
+            android:contentDescription="Filter doctors"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Specialization Filter Chips -->
+    <HorizontalScrollView
+        android:id="@+id/filter_chips_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/search_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_specialization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            app:singleSelection="false"
+            android:paddingEnd="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_cardiologist"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Cardiologist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_dermatologist"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Dermatologist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_neurologist"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Neurologist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+    </HorizontalScrollView>
+
+    <!-- RecyclerView for listing doctors -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctors_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/filter_chips_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

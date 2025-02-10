@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "73013255667",
+    "firebase_url": "https://health-mate01-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "health-mate01",
+    "storage_bucket": "health-mate01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73013255667:android:a5c8141aa4c8d824574686",
+        "android_client_info": {
+          "package_name": "com.corps.healthmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBI1oEbirNuCMyyJWuxJT6RVG0ZXpll9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

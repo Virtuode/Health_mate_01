@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/health_status" />
+
+        <TextView
+            style="@style/SurveyTitle"
+            android:text="Current Health Status" />
+
+        <TextView
+            style="@style/SurveySubtitle"
+            android:text="Choose one option to get closer your goal" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/symptomsChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHeadache"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Headache"
+                android:tag="Headache"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPain"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pain"
+                android:checkable="true"
+                android:tag="Pain"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFever"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fever"
+                android:checkable="true"
+                android:tag="Fever"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCough"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cough"
+                android:checkable="true"
+                android:tag="Cough"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWeakness"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weakness"
+                android:checkable="true"
+                android:tag="Weakness"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                style="@style/SurveyTitle"
+                android:textSize="18sp"
+                android:text="Current Medications" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/medicationNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Medication Name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dosageInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Dosage"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/frequencyInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Frequency"
+                        android:inputType="none"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Lifestyle Section -->
+        <TextView
+            style="@style/SurveyTitle"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:text="Lifestyle Habits" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/lifestyleChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSmoking"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Smoking"
+                android:tag="Smoking"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAlcohol"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alcohol"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExercise"
+                style="@style/SurveyChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular Exercise"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Sleep Duration -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Duration (hours)"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sleepDurationSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="12"
+            android:stepSize="0.5"
+            app:labelBehavior="withinBounds"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Exercise Frequency -->
+        <TextView
+            style="@style/SurveyTitle"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:text="Exercise Frequency" />
+
+        <RadioGroup
+            android:id="@+id/exerciseRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioDaily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"/>
+
+            <RadioButton
+                android:id="@+id/radio3Times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3-4 times a week"/>
+
+            <RadioButton
+                android:id="@+id/radioOnce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Once a week"/>
+
+            <RadioButton
+                android:id="@+id/radioRarely"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rarely"/>
+        </RadioGroup>
+
+        <!-- Stress Level -->
+        <TextView
+            style="@style/SurveyTitle"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:text="Stress Level" />
+
+        <RadioGroup
+            android:id="@+id/stressLevelGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/lowStress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Low"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/mediumStress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medium"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/highStress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="High"/>
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>
